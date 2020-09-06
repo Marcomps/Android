@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
 public class MenuPrincipal extends AppCompatActivity {
    private Button btnAceptar, btnRegresar;
@@ -31,11 +32,21 @@ public class MenuPrincipal extends AppCompatActivity {
         rdoVolcanes = findViewById(R.id.rdoVolcanes);
 
         btnAceptar = findViewById(R.id.btnAceptar);
+        btnRegresar = findViewById(R.id.btnRegresar);
 
         btnAceptar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 VerificarBotonesSeleccionados();
+            }
+        });
+
+        btnRegresar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MenuPrincipal.this, MainActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -72,6 +83,10 @@ public class MenuPrincipal extends AppCompatActivity {
            Intent intent = new Intent(MenuPrincipal.this, RespSing.class);
            startActivity(intent);
        }
+       else
+           {
+               Toast.makeText(MenuPrincipal.this,"Debe selecionar Rios, Lagos o Volcanes",Toast.LENGTH_LONG).show();
+           }
 
    }
 }
