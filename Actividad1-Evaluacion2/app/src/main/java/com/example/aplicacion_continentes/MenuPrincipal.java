@@ -43,10 +43,35 @@ public class MenuPrincipal extends AppCompatActivity {
 
    public  void VerificarBotonesSeleccionados()
    {
-        if(rdoContAmerica.isChecked()==true && rdoRios.isChecked()==true)
+        if((rdoContAmerica.isChecked()==true && rdoRios.isChecked()==true)||(rdoContAmerica.isChecked()==true && rdoLagos.isChecked()==true)||(rdoContAmerica.isChecked()==true && rdoVolcanes.isChecked()==true))
         {
             Intent intent = new Intent(MenuPrincipal.this, RespSing.class);
             startActivity(intent);
         }
+
+       if((rdoContEuropa.isChecked()==true && rdoRios.isChecked()==true)||(rdoContEuropa.isChecked()==true && rdoLagos.isChecked()==true)||(rdoContEuropa.isChecked()==true && rdoVolcanes.isChecked()==true))
+       {
+           Intent intent = new Intent(MenuPrincipal.this, RespSing.class);
+           startActivity(intent);
+       }
+
+       if((rdoContAsia.isChecked()==true && rdoRios.isChecked()==true)||(rdoContAsia.isChecked()==true && rdoLagos.isChecked()==true)||(rdoContAsia.isChecked()==true && rdoVolcanes.isChecked()==true))
+       {
+           Intent intent = new Intent(MenuPrincipal.this, RespSing.class);
+           startActivity(intent);
+       }
+
+       if((rdoContAfrica.isChecked()==true && rdoRios.isChecked()==true)||(rdoContAfrica.isChecked()==true && rdoLagos.isChecked()==true)||(rdoContAfrica.isChecked()==true && rdoVolcanes.isChecked()==true))
+       {
+           Intent intent = new Intent(MenuPrincipal.this, RespSing.class);
+           startActivity(intent);
+       }
+
+       if((rdoContOceania.isChecked()==true && rdoRios.isChecked()==true)||(rdoContOceania.isChecked()==true && rdoLagos.isChecked()==true)||(rdoContOceania.isChecked()==true && rdoVolcanes.isChecked()==true))
+       {
+           Intent intent = new Intent(MenuPrincipal.this, RespSing.class);
+           startActivity(intent);
+       }
+
    }
 }
